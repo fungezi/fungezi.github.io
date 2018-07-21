@@ -43,7 +43,7 @@
     
     <title>
         
-            Hello World | 
+            gulp 学习总结 | 
         
         xiliYu
     </title>
@@ -210,7 +210,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="xiliYu">
-    <meta name="msapplication-starturl" content="fungezi.github.io/2018/04/13/hello-world/">
+    <meta name="msapplication-starturl" content="fungezi.github.io/2018/07/21/gulp-share/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="xiliYu">
@@ -225,16 +225,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="fungezi.github.io/2018/04/13/hello-world/">
+    <meta property="og:url" content="fungezi.github.io/2018/07/21/gulp-share/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Hello World | xiliYu">
+    <meta property="og:title" content="gulp 学习总结 | xiliYu">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="人生的路走走停停">
     
 
     
-        <meta property="article:published_time" content="Fri Apr 13 2018 21:56:02 GMT+0800">
-        <meta property="article:modified_time" content="Sat Apr 14 2018 16:40:28 GMT+0800">
+        <meta property="article:published_time" content="Sat Jul 21 2018 23:06:51 GMT+0800">
+        <meta property="article:modified_time" content="Sat Jul 21 2018 23:21:02 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -242,7 +242,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="fungezi.github.io/2018/04/13/hello-world/index.html" />
+        <link rel="canonical" href="fungezi.github.io/2018/07/21/gulp-share/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -254,10 +254,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "fungezi.github.io/2018/04/13/hello-world/index.html",
-    "headline": "Hello World",
-    "datePublished": "Fri Apr 13 2018 21:56:02 GMT+0800",
-    "dateModified": "Sat Apr 14 2018 16:40:28 GMT+0800",
+    "mainEntityOfPage": "fungezi.github.io/2018/07/21/gulp-share/index.html",
+    "headline": "gulp 学习总结",
+    "datePublished": "Sat Jul 21 2018 23:06:51 GMT+0800",
+    "dateModified": "Sat Jul 21 2018 23:21:02 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "xiliYu",
@@ -341,7 +341,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Quick-Start"><span class="post-toc-number">1.</span> <span class="post-toc-text">Quick Start</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Create-a-new-post"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Create a new post</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Run-server"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Run server</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Generate-static-files"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Generate static files</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Deploy-to-remote-sites"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#gulp-学习总结"><span class="post-toc-number">1.</span> <span class="post-toc-text">gulp 学习总结</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-打包"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.打包</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-监听"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2.监听</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-运行"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">3.运行</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -360,20 +360,11 @@
                 
     <!-- Paradox Post Header -->
     
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script type="text/ls-javascript" id="post-thumbnail-script">
-    var randomNum = Math.floor(Math.random() * 19 + 1);
-
-    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-</script>
-
-        
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://oz57y8791.bkt.clouddn.com/1BE4D920-C084-4C65-9C1E-077152975B65.png)">
     
             <p class="article-headline-p">
-                Hello World
+                gulp 学习总结
             </p>
         </div>
 
@@ -392,7 +383,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>xiliYu</strong>
-        <span>4月 13, 2018</span>
+        <span>7月 21, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -424,7 +415,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Hello World&url=fungezi.github.io/2018/04/13/hello-world/index.html&pic=fungezi.github.io/img/ifavicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=gulp 学习总结&url=fungezi.github.io/2018/07/21/gulp-share/index.html&pic=fungezi.github.io/img/ifavicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -433,7 +424,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Hello World&url=fungezi.github.io/2018/04/13/hello-world/index.html&via=xiliYu" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=gulp 学习总结&url=fungezi.github.io/2018/07/21/gulp-share/index.html&via=xiliYu" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -442,7 +433,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=fungezi.github.io/2018/04/13/hello-world/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=fungezi.github.io/2018/07/21/gulp-share/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -451,7 +442,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=fungezi.github.io/2018/04/13/hello-world/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=fungezi.github.io/2018/07/21/gulp-share/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -476,15 +467,24 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h3 id="gulp-学习总结"><a href="#gulp-学习总结" class="headerlink" title="gulp 学习总结"></a>gulp 学习总结</h3><p>在学习 gulp 的过程中我总是很疑惑他具体都干了些啥，在了一段时间之后我才发现完全没有必要去纠结某个插件是怎么用的、他需要些什么配置。需要我们去关注的仅仅只是 gulp 我们具体的项目中需要去做啥。</p>
+<p>以一个 vue 开发的项目为例：<br>首先我们需要明确 gulp 的整体流程：打包 &gt; 监听 &gt; 运行<br>但是在编写流程之前 我们还需要一些配置项用于定义：读取路径、输出路径、文件名、文件名前/后缀等等。</p>
+<h4 id="1-打包"><a href="#1-打包" class="headerlink" title="1.打包"></a>1.打包</h4><blockquote>
+<p>通过 gulp.task 定义一个任务，使用 gulp.src 读取到文件的数据流，然后在管道内使用 插件来对数据流进行处理</p>
+</blockquote>
+<h4 id="2-监听"><a href="#2-监听" class="headerlink" title="2.监听"></a>2.监听</h4><blockquote>
+<p>使用 gulp.watch 监听源文件，当源文件发生修改的时候，会在第一时间被监听到并触发回调（回调里面是对各种被修改文件的处理）</p>
+</blockquote>
+<h4 id="3-运行"><a href="#3-运行" class="headerlink" title="3.运行"></a>3.运行</h4><blockquote>
+<p>利用 browserSync 来监听目标文件，当文件发生改动时就会触发回调函数来是浏览器重新渲染（异步的）。</p>
+</blockquote>
+<p>在上述的流程当中是需要区分一下当前的环境的，如果是 开发环境（develop）我们就不需要对文件进行压缩、合并操作，而且目的文件地址也是不一样的。<br>在生产环境（production）中我们需要对文件进行压缩 合并 以及不需要对 js 进行校验另外还需要做版本管理。</p>
+<p>gulpfile.js 文件大致结构  如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line">//写配置</span><br><span class="line">    SRC: &apos;src/&apos;,</span><br><span class="line">    DIST: &apos;dist/&apos;,</span><br><span class="line">    RELEASE: &apos;release/&apos;</span><br><span class="line">let config = &#123;</span><br><span class="line">    src: SRC,</span><br><span class="line">    dist: DIST,</span><br><span class="line">    release: RELEASE,</span><br><span class="line">    js: &#123;</span><br><span class="line">        dir: SRC,</span><br><span class="line">        src: SRC + &apos;js&apos;,</span><br><span class="line">        dist: DIST + &apos;js&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    css: &#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;,</span><br><span class="line">    ...</span><br><span class="line">    img: &#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">// 定义任务</span><br><span class="line">gulp.task(&apos;minJs&apos;, (cb)=&gt;&#123;</span><br><span class="line">    // 读取-按需读取-合并文件-合并模块-校验-重命名-压缩-写入</span><br><span class="line">&#125;)</span><br><span class="line">gulp.task(&apos;minCss&apos;, (cb)=&gt;&#123;</span><br><span class="line">    // 读取-按需读取-合并文件-合并模块-添加版本号-重命名-压缩-写入</span><br><span class="line">&#125;)</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">// 监听 dist 刷新浏览器</span><br><span class="line">gulp.task(&apos;browserSync&apos;, ()=&gt;&#123;</span><br><span class="line">    browserSync(&#123;</span><br><span class="line">        server: &apos;./&apos;</span><br><span class="line">    &#125;)</span><br><span class="line">    return gulp.watch(&apos;./dist&apos;, &#123;readDelay: 300&#125;).on(&apos;change&apos;,browserSync.reload)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">//定义默认任务</span><br><span class="line">gulp.task(&apos;default&apos;, ()=&gt;&#123;</span><br><span class="line">    // 利用 run-sequence 来顺序执行 task</span><br><span class="line">    runSequence(&apos;clean&apos;, [&apos;minJs&apos;, &apos;minCss&apos;, ...], &apos;watchSrc&apos;, &apos;browserSync&apos;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">gulp.task(&apos;relase&apos;, ()=&gt;&#123;</span><br><span class="line">    runSequence(&apos;clean&apos;, [&apos;minJs&apos;, &apos;minCss&apos;, ...])</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">最后我们还需要去定义一下 script 脚本，用来启动 gulpfile.js</span><br><span class="line"></span><br><span class="line">script: &#123;</span><br><span class="line">    test: &apos;...&apos;,</span><br><span class="line">    start: &apos;gulp default&apos;</span><br><span class="line">    dev: &apos;gulp default&apos;,</span><br><span class="line">    release: &apos;gulp release&apos;,</span><br><span class="line">    clean: &apos;...&apos;,</span><br><span class="line">    build: &apos;clean &amp;&amp; dev&apos;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">下面列出一些常用插件：</span><br><span class="line">gulp-make-css-url-version // 给css文件里引用url加版本号               cnpm install gulp-make-css-url-version --save-dev</span><br><span class="line">gulp-clean-css            // css压缩                               cnpm install gulp-clean-css --save-dev</span><br><span class="line">gulp-postcss              // css兼容                               cnpm install gulp-postcss --save-dev</span><br><span class="line">gulp-less                 // less编译                              cnpm install gulp-less --save-dev</span><br><span class="line">gulp-sass                 // sass编译                              cnpm install gulp-sass --save-dev</span><br><span class="line">gulp-imagemin             // 图片压缩                               cnpm install gulp-imagemin --save-dev</span><br><span class="line">gulp-cache                // 缓存                                  cnpm install gulp-cache --save-dev</span><br><span class="line">gulp-uglify               // js压缩                                cnpm install gulp-uglify --save-dev</span><br><span class="line">gulp-rename               // 重命名                                cnpm install gulp-rename --save-dev</span><br><span class="line">gulp-autoprefixer         // 自动处理浏览器前缀                      cnpm install gulp-autoprefixer --save-dev</span><br><span class="line">gulp-concat               // 文件合并                              cnpm install gulp-concat --save-dev</span><br><span class="line">gulp-content-includer     // 模块合并                              cnpm install gulp-content-includer --save-dev</span><br><span class="line">gulp-file-include         // 文件引用                              cnpm install gulp-file-include --save-dev</span><br><span class="line">gulp-file-copy            // 文件复制                              cnpm install gulp-file-copy --save-dev</span><br><span class="line">gulp-changed              // 文件监听是否被改变                     cnpm install gulp-changed --save-dev</span><br><span class="line">gulp-debug                // 调试                                  cnpm install --save-dev gulp-debug</span><br><span class="line">del                       // 文件清理                              cnpm install del --save-dev</span><br><span class="line">imagemin-pngquant         // PNG压缩                               cnpm install imagemin-pngquant --save-dev</span><br><span class="line">run-sequence              // 多任务                                cnpm install run-sequence --save-dev</span><br><span class="line">browser-sync              // 浏览器                                cnpm install browser-sync --save-dev</span><br></pre></td></tr></table></figure>
+<p>总结：</p>
+<blockquote>
+<p>gulp 只是一个自动化构建工具我们不需要去主动的了解它每一个细节，只是说我们需要知道 gulp 能干什么我们怎么去做就行了。至于具体的处理工作交给插件去完成就可以了。当在项目中遇到特殊的问题再去查资料然后网里面怼插件就可以了。</p>
+</blockquote>
 
         
     
@@ -505,19 +505,19 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/07/21/gulp-share/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2018/04/13/hello-world/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
